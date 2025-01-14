@@ -10,3 +10,8 @@ $val = "6";
 $val1 = "4";
 echo "$val" + "$val1";
 ?>
+
+<?php
+$mybool = true;
+echo "la valeur est égal à true";
+?>
