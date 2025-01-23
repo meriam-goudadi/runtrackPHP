@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 22 jan. 2025 à 13:12
+-- Généré le : jeu. 23 jan. 2025 à 08:56
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `etudiants` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   `prénom` varchar(255) NOT NULL,
-  `naissance` int NOT NULL,
+  `naissance` date NOT NULL,
   `sexe` varchar(25) NOT NULL,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
@@ -43,20 +43,13 @@ CREATE TABLE IF NOT EXISTS `etudiants` (
 --
 
 INSERT INTO `etudiants` (`ID`, `nom`, `prénom`, `naissance`, `sexe`, `email`) VALUES
-(1, 'Zimmermann', 'Cyril', 19890102, 'homme', 'cyril@laplateforme.io'),
-(2, 'Soriano', 'Jessica', 19950908, 'femme', 'jessica@laplateforme.io'),
-(3, 'Roumégas', 'Roxan', 20160908, 'homme', 'roxan@laplateforme.io'),
-(4, 'Assens', 'Pascal', 19991231, 'homme', 'pascal@laplateforme.io'),
-(5, 'Cristinelli', 'Terry', 20050201, 'homme', 'terry@laplateforme.io'),
-(6, 'Habib', 'Ruben', 19930526, 'homme', 'ruben.habib@laplateforme.io'),
-(7, 'Dupont', 'Toto', 20191107, 'homme', 'toto@laplateforme.io'),
-(8, 'Zimmermann', 'Cyril', 19890102, 'homme', 'cyril@laplateforme.io'),
-(9, 'Soriano', 'Jessica', 19950908, 'femme', 'jessica@laplateforme.io'),
-(10, 'Roumégas', 'Roxan', 20160908, 'homme', 'roxan@laplateforme.io'),
-(11, 'Assens', 'Pascal', 19991231, 'homme', 'pascal@laplateforme.io'),
-(12, 'Cristinelli', 'Terry', 20050201, 'homme', 'terry@laplateforme.io'),
-(13, 'Habib', 'Ruben', 19930526, 'homme', 'ruben.habib@laplateforme.io'),
-(14, 'Dupont', 'Toto', 20191107, 'homme', 'toto@laplateforme.io');
+(1, 'Zimmermann', 'Cyril', '1989-01-02', 'homme', 'cyril@laplateforme.io'),
+(2, 'Soriano', 'Jessica', '1995-09-08', 'femme', 'jessica@laplateforme.io'),
+(3, 'Roumégas', 'Roxan', '2016-09-08', 'homme', 'roxan@laplateforme.io'),
+(4, 'Assens', 'Pascal', '1999-12-31', 'homme', 'pascal@laplateforme.io'),
+(5, 'Cristinelli', 'Terry', '2005-02-01', 'homme', 'terry@laplateforme.io'),
+(6, 'Habib', 'Ruben', '1993-05-26', 'homme', 'ruben.habib@laplateforme.io'),
+(7, 'Dupont', 'Toto', '2019-11-07', 'homme', 'toto@laplateforme.io');
 
 -- --------------------------------------------------------
 
@@ -88,23 +81,23 @@ INSERT INTO `salles` (`ID`, `nom`, `ID_étage`, `capacité`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `étage`
+-- Structure de la table `étages`
 --
 
-DROP TABLE IF EXISTS `étage`;
-CREATE TABLE IF NOT EXISTS `étage` (
+DROP TABLE IF EXISTS `étages`;
+CREATE TABLE IF NOT EXISTS `étages` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   `numéro` int NOT NULL,
-  `supercie` int NOT NULL,
+  `superficie` int NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `étage`
+-- Déchargement des données de la table `étages`
 --
 
-INSERT INTO `étage` (`ID`, `nom`, `numéro`, `supercie`) VALUES
+INSERT INTO `étages` (`ID`, `nom`, `numéro`, `superficie`) VALUES
 (1, 'RDC', 0, 500),
 (2, 'R+1', 1, 500);
 COMMIT;
