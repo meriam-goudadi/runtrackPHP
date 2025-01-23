@@ -1,0 +1,1 @@
+SELECT nom, ID_étage FROM salles;

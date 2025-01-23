@@ -1,0 +1,1 @@
+SELECT AVG(superficie) FROM étages;
