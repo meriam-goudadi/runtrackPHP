@@ -24,9 +24,9 @@
         <table border='1'>
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Nom</th>
                     <th>Prénom</th>
+                    <th>Naissance</th>
                     <th>Sexe</th>
                     <th>Email</th>
                 </tr>
@@ -37,9 +37,9 @@
                     foreach ($etudiants as $etudiant => $champs) {
                         echo("
                         <tr>
-                            <td>" . $champs['ID'] . "</td>
                             <td>" . $champs['nom'] . "</td>
                             <td>" . $champs['prénom'] . "</td>
+                            <td>" . $champs['naissance'] . "</td>
                             <td>" . $champs['sexe'] . "</td>
                             <td>" . $champs['email'] . "</td>
 
